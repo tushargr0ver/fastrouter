@@ -1,0 +1,24 @@
+services:
+  backend-primary:
+    build:
+      context: backend
+      dockerfile: primary/Dockerfile
+    ports:
+      - '8000:8000'
+    env_file: .env
+
+  backend-api:
+    build:
+      context: backend
+      dockerfile: api/Dockerfile
+    ports:
+      - '8001:8001'
+    environment:
+      - PRIMARY_SERVICE_URL=http://backend-primary:8000
+    depends_on:
+      - backend-primary
+
+  frontend:
+    build: frontend
+    ports:
+      - '3000:3000'
