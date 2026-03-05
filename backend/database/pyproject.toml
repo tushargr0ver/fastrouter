@@ -1,0 +1,12 @@
+[project]
+name = "database"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "passlib[bcrypt]>=1.7.4",
+    "psycopg[binary]>=3.3.3",
+    "python-jose[cryptography]>=3.5.0",
+    "sqlmodel>=0.0.37",
+]
