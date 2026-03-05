@@ -1,0 +1,29 @@
+# Virtual environments
+.venv
+venv
+env
+
+# Python artifacts
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Git & Docker
+.git
+.gitignore
+.dockerignore
+Dockerfile
+
+# Environment variables
+.env
+.env.*
+
+# Tests & Caches
+.pytest_cache
+.coverage
+htmlcov
+
+# IDEs
+.vscode
+.idea
