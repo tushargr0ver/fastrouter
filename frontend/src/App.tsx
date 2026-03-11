@@ -9,6 +9,7 @@ import { CreditsPage } from './components/pages/CreditsPage';
 import { UsagePage } from './components/pages/UsagePage';
 import { ModelsPage } from './components/pages/ModelsPage';
 import { APITesterPage } from './components/pages/APITesterPage';
+import { Mascot } from './components/Mascot';
 import './index.css';
 
 function AppContent() {
@@ -60,6 +61,8 @@ export function App() {
   return (
     <AuthContext.Provider value={auth}>
       {auth.token ? <AppContent /> : <LoginPage />}
+      {/* Mascot is always rendered so it's visible on both the login and app pages */}
+      <Mascot />
     </AuthContext.Provider>
   );
 }
